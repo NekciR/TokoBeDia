@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="TokoBeDia.Views.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title>TokoBeDia</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    <link href="../Styles/Style.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark pl-5 pr-5">
+        <a class="navbar-brand" href="Home.aspx">TokoBeDia</a>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" id="ViewProduct" runat="server">
+                <a class="nav-link" href="ViewProduct.aspx">View Product</a>
+            </li>
+            <li class="nav-item" id="ViewCart" runat="server" visible="false">
+                <a class="nav-link" href="ViewCart.aspx">Cart</a>
+            </li>
+            <li class="nav-item" id="ViewTransaction" runat="server" visible="false">
+                <a class="nav-link" href="ViewTransaction.aspx">View Transaction</a>
+            </li>
+            <li class="nav-item" id="Register" runat="server">
+                <a class="nav-link" href="RegisterForm.aspx">Register</a>
+            </li>
+            <li class="nav-item " id="Login" runat="server">
+                <a class="nav-link" href="LoginForm.aspx">Login</a>
+            </li>
+            <li class="nav-item" id="Account" runat="server">
+                <a class="nav-link" href="ViewAccount.aspx">Account</a>
+            </li>
+            <li class="nav-item " id="Logout" runat="server">
+                <a runat="server" class="nav-link" href="#" onserverclick="logoutBtn_Click">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <br />
+
+
+
+
+
+
+    <%--Footer--%>
+    <footer class="footer font-small bg-success">
+
+        <div class="footer-copyright text-center py-3">
+            ©
+                <asp:Label ID="LbYearNow" runat="server"></asp:Label>
+            Copyright: Group 5
+        </div>
+
+    </footer>
+</body>
+
+</html>
+
